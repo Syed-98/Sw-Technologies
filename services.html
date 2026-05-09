@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | SW Technologies</title>
+  <meta name="description" content="Explore our professional web services including Web Design, Web Development, E-Commerce, and SEO.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page Banner */
+    .page-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 150px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(100,255,218,0.15) 0%, rgba(10,25,47,0) 60%);
+      opacity: 0.8;
+    }
+
+    .banner-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner-subtitle {
+      color: #ccd6f6;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Detailed Service Cards */
+    .services-list {
+      background-color: var(--bg-color);
+    }
+
+    .service-detail-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      margin-bottom: 3rem;
+      display: flex;
+      flex-direction: row;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .service-detail-card:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .service-detail-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
+    }
+
+    .service-visual {
+      flex: 1;
+      min-height: 300px;
+      background: linear-gradient(45deg, var(--secondary), var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+      color: var(--accent);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-visual::after {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.03) 10px, rgba(255,255,255,0.03) 20px);
+    }
+
+    .service-content {
+      flex: 1.5;
+      padding: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-content h3 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-content p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .service-features li {
+      margin-bottom: 0.75rem;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--accent);
+      font-weight: bold;
+      background: var(--primary);
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    @media (max-width: 900px) {
+      .service-detail-card, 
+      .service-detail-card:nth-child(even) {
+        flex-direction: column;
+      }
+      .service-content {
+        padding: 2.5rem;
+      }
+      .service-visual {
+        min-height: 250px;
+      }
+      .banner-title { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">SW <span>Tech</span></a>
+      <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <header class="page-banner">
+    <div class="container">
+      <h1 class="banner-title">Our Services</h1>
+      <p class="banner-subtitle">Comprehensive digital solutions engineered to elevate your brand and drive results.</p>
+    </div>
+  </header>
+
+  <!-- Detailed Services List -->
+  <section class="services-list section-padding">
+    <div class="container">
+      
+      <!-- Service 1: Website Design -->
+      <div class="service-detail-card">
+        <div class="service-visual">🎨</div>
+        <div class="service-content">
+          <h3>Website Design</h3>
+          <p>We create stunning, user-centric interfaces designed to wow your visitors and boost engagement. Our design process focuses on aesthetics, usability, and brand alignment.</p>
+          <ul class="service-features">
+            <li>Custom UI/UX Design</li>
+            <li>Mobile-First Responsive Layouts</li>
+            <li>Brand Identity Integration</li>
+            <li>Interactive Prototypes</li>
+          </ul>
+          <div>
+            <a href="contact.html" class="btn btn-primary">Start Your Design Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2: Website Development -->
+      <div class="service-detail-card">
+        <div class="service-visual">💻</div>
+        <div class="service-content">
+          <h3>Website Development</h3>
+          <p>Robust, scalable, and lightning-fast websites built with the latest modern technologies. We write clean, semantic code that performs flawlessly across all devices and browsers.</p>
+          <ul class="service-features">
+            <li>Front-End & Back-End Development</li>
+            <li>Performance Optimization</li>
+            <li>CMS Integration</li>
+            <li>Secure & Scalable Architecture</li>
+          </ul>
+          <div>
+            <a href="contact.html" class="btn btn-primary">Build Your Website</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3: E-Commerce Development -->
+      <div class="service-detail-card">
+        <div class="service-visual">🛒</div>
+        <div class="service-content">
+          <h3>E-Commerce Development</h3>
+          <p>High-converting online stores engineered for seamless shopping experiences. We build secure platforms that make it easy for your customers to browse, cart, and checkout.</p>
+          <ul class="service-features">
+            <li>Custom Storefront Design</li>
+            <li>Payment Gateway Integration</li>
+            <li>Inventory Management Systems</li>
+            <li>Conversion Rate Optimization</li>
+          </ul>
+          <div>
+            <a href="contact.html" class="btn btn-primary">Launch Your Store</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4: SEO & Digital Marketing -->
+      <div class="service-detail-card">
+        <div class="service-visual">📈</div>
+        <div class="service-content">
+          <h3>SEO & Digital Marketing</h3>
+          <p>Data-driven strategies to improve your visibility and dominate search rankings. We help you attract the right audience and convert them into loyal customers.</p>
+          <ul class="service-features">
+            <li>On-Page & Off-Page SEO</li>
+            <li>Keyword Strategy & Content Planning</li>
+            <li>Technical SEO Audits</li>
+            <li>Analytics & Performance Tracking</li>
+          </ul>
+          <div>
+            <a href="contact.html" class="btn btn-primary">Grow Your Traffic</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section-padding" style="background-color: var(--white); text-align: center;">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom: 1.5rem;">Ready to Transform Your Digital Presence?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Let's discuss how our tailored web solutions can help you achieve your business goals.</p>
+      <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">Get in Touch Today</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="display: block; margin-bottom: 1rem;">SW <span>Tech</span></a>
+          <p style="color: #8892b0; font-size: 0.95rem; margin-bottom: 1.5rem;">Empowering businesses with modern, fast, and scalable digital solutions.</p>
+          <div style="display: flex; gap: 1rem; color: var(--accent);">
+            <a href="#">TW</a>
+            <a href="#">LN</a>
+            <a href="#">IG</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <div class="footer-links">
+            <a href="services.html">Website Design</a>
+            <a href="services.html">Website Development</a>
+            <a href="services.html">E-Commerce</a>
+            <a href="services.html">SEO & Marketing</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <div class="footer-links" style="color: #8892b0; font-size: 0.95rem;">
+            <p>📍 123 Tech Avenue, Silicon Valley</p>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>✉️ hello@swtech.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SW Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

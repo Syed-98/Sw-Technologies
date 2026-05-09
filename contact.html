@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SW Technologies</title>
+  <meta name="description" content="Get in touch with SW Technologies. We are ready to build your next web project.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page Banner */
+    .page-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 150px 0 80px;
+      text-align: center;
+      position: relative;
+    }
+
+    .banner-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner-subtitle {
+      color: #ccd6f6;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background-color: var(--bg-color);
+    }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    /* Contact Details */
+    .contact-info {
+      background: var(--primary);
+      color: var(--white);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-info::before {
+      content: '';
+      position: absolute;
+      bottom: -10%;
+      right: -10%;
+      width: 200px;
+      height: 200px;
+      background: rgba(100, 255, 218, 0.1);
+      border-radius: 50%;
+    }
+
+    .contact-info h3 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      color: var(--white);
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-icon {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .info-text h4 {
+      margin-bottom: 0.25rem;
+      font-size: 1.1rem;
+      color: #ccd6f6;
+    }
+
+    .info-text p {
+      color: #8892b0;
+    }
+
+    /* Contact Form */
+    .contact-form-container {
+      padding: 3rem;
+    }
+
+    .contact-form-container h3 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .contact-form-container > p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-main);
+      background-color: var(--bg-color);
+      transition: var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
+    }
+
+    #formStatus {
+      display: none;
+      margin-top: 1.5rem;
+      font-weight: 500;
+    }
+
+    /* Map Section */
+    .map-section {
+      padding-bottom: 5rem;
+      background-color: var(--bg-color);
+    }
+
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      height: 450px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 900px) {
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .banner-title { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">SW <span>Tech</span></a>
+      <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <header class="page-banner">
+    <div class="container">
+      <h1 class="banner-title">Contact Us</h1>
+      <p class="banner-subtitle">We would love to hear from you. Let's discuss your next project.</p>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact-section section-padding">
+    <div class="container">
+      <div class="contact-wrapper">
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p style="color: #8892b0; margin-bottom: 2.5rem;">Have a question or a project in mind? Reach out to us, and our team will get back to you shortly.</p>
+          
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-text">
+              <h4>Our Location</h4>
+              <p>123 Tech Avenue, Suite 400<br>Silicon Valley, CA 94025</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-text">
+              <h4>Phone Number</h4>
+              <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-text">
+              <h4>Email Address</h4>
+              <p>hello@swtech.com<br>support@swtech.com</p>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <div style="margin-top: 3rem; display: flex; gap: 1rem; color: var(--accent);">
+            <a href="#" style="font-weight: bold;">Twitter</a>
+            <a href="#" style="font-weight: bold;">LinkedIn</a>
+            <a href="#" style="font-weight: bold;">Instagram</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container">
+          <h3>Send Us a Message</h3>
+          <p>Fill out the form below and we will get back to you as soon as possible.</p>
+          
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com">
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" placeholder="Project Inquiry">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;">Send Message</button>
+            <div id="formStatus"></div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-container">
+        <!-- Embed Google Map for Silicon Valley / San Jose area as a placeholder -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101408.21703212891!2d-122.081119!3d37.3860517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilicon%20Valley%2C%20CA!5e0!3m2!1sen!2sus!4v1684339900000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="display: block; margin-bottom: 1rem;">SW <span>Tech</span></a>
+          <p style="color: #8892b0; font-size: 0.95rem; margin-bottom: 1.5rem;">Empowering businesses with modern, fast, and scalable digital solutions.</p>
+          <div style="display: flex; gap: 1rem; color: var(--accent);">
+            <a href="#">TW</a>
+            <a href="#">LN</a>
+            <a href="#">IG</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <div class="footer-links">
+            <a href="services.html">Website Design</a>
+            <a href="services.html">Website Development</a>
+            <a href="services.html">E-Commerce</a>
+            <a href="services.html">SEO & Marketing</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <div class="footer-links" style="color: #8892b0; font-size: 0.95rem;">
+            <p>📍 123 Tech Avenue, Silicon Valley</p>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>✉️ hello@swtech.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SW Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

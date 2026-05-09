@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SW Technologies | Modern Web Solutions</title>
+  <meta name="description" content="SW Technologies builds fast, modern, and responsive websites tailored to client needs.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hero Section Specific Styles */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px; /* Offset for navbar */
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(100,255,218,0.1) 0%, rgba(10,25,47,0) 70%);
+      transform: rotate(-45deg);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-headline {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: var(--white);
+    }
+
+    .hero-headline span {
+      color: var(--accent);
+    }
+
+    .hero-subheadline {
+      font-size: 1.25rem;
+      color: #ccd6f6;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    /* Services Overview */
+    .service-card {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      background-color: var(--secondary);
+      border-radius: 50%;
+    }
+
+    .service-card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+    }
+
+    /* Why Choose Us */
+    .why-choose-us {
+      background-color: var(--white);
+    }
+
+    .strength-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .strength-icon {
+      flex-shrink: 0;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(100, 255, 218, 0.1);
+      color: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .strength-content h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .strength-content p {
+      color: var(--text-muted);
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background-color: var(--bg-color);
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      background-color: var(--secondary);
+      border-radius: 50%;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-family: var(--font-heading);
+    }
+
+    .author-info h4 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .author-info span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .hero-headline { font-size: 2.5rem; }
+      .hero-ctas { flex-direction: column; }
+      .strength-item { flex-direction: column; gap: 1rem; text-align: center; }
+      .strength-icon { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">SW <span>Tech</span></a>
+      <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-headline">Building Digital Experiences That <span>Win Trust</span></h1>
+        <p class="hero-subheadline">We help businesses, startups, and entrepreneurs establish a strong online presence with fast, modern, and responsive websites.</p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="services.html" class="btn btn-secondary">View Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Our Expertise</h2>
+      <p class="section-subtitle">Comprehensive web solutions to accelerate your business growth.</p>
+      
+      <div class="grid-4">
+        <div class="card service-card">
+          <div class="service-icon">🎨</div>
+          <h3>Web Design</h3>
+          <p>Stunning, user-centric interfaces designed to wow your visitors and boost engagement.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Robust, scalable, and lightning-fast websites built with the latest modern technologies.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">🛒</div>
+          <h3>E-Commerce</h3>
+          <p>High-converting online stores engineered for seamless shopping experiences.</p>
+        </div>
+        <div class="card service-card">
+          <div class="service-icon">📈</div>
+          <h3>SEO & Marketing</h3>
+          <p>Data-driven strategies to improve your visibility and dominate search rankings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us section-padding">
+    <div class="container grid-2" style="align-items: center;">
+      <div>
+        <h2 class="section-title" style="text-align: left;">Why Partner With Us?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">We don't just build websites; we build digital assets that generate value. Here is what sets us apart from the competition.</p>
+        
+        <div class="strength-item">
+          <div class="strength-icon">01</div>
+          <div class="strength-content">
+            <h3>Tailored Solutions</h3>
+            <p>Every project is custom-built to align perfectly with your unique brand identity and business objectives.</p>
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon">02</div>
+          <div class="strength-content">
+            <h3>Performance First</h3>
+            <p>We prioritize speed, accessibility, and clean code to ensure your site performs flawlessly on all devices.</p>
+          </div>
+        </div>
+        <div class="strength-item">
+          <div class="strength-icon">03</div>
+          <div class="strength-content">
+            <h3>Dedicated Support</h3>
+            <p>Our commitment doesn't end at launch. We provide ongoing support to keep your site secure and up-to-date.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- Placeholder for a nice image or illustration -->
+        <div style="background: linear-gradient(45deg, var(--secondary), var(--primary)); border-radius: 12px; height: 500px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg);">
+          <span style="color: var(--accent); font-size: 5rem; opacity: 0.5;">🚀</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section-padding">
+    <div class="container">
+      <h2 class="section-title">Client Success Stories</h2>
+      <p class="section-subtitle">Don't just take our word for it. See what our partners have to say.</p>
+      
+      <div class="grid-2">
+        <div class="testimonial-card">
+          <p class="testimonial-text">"SW Technologies completely transformed our online presence. Our new website is not only beautiful but has increased our lead generation by over 150% in just two months!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div class="author-info">
+              <h4>Jane Doe</h4>
+              <span>CEO, TechStart Inc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">"The team's attention to detail and commitment to modern design standards really sets them apart. They delivered a fast, responsive e-commerce platform that our customers love."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <h4>Michael Smith</h4>
+              <span>Founder, Style & Co.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="display: block; margin-bottom: 1rem;">SW <span>Tech</span></a>
+          <p style="color: #8892b0; font-size: 0.95rem; margin-bottom: 1.5rem;">Empowering businesses with modern, fast, and scalable digital solutions.</p>
+          <div style="display: flex; gap: 1rem; color: var(--accent);">
+            <a href="#">TW</a>
+            <a href="#">LN</a>
+            <a href="#">IG</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <div class="footer-links">
+            <a href="services.html">Website Design</a>
+            <a href="services.html">Website Development</a>
+            <a href="services.html">E-Commerce</a>
+            <a href="services.html">SEO & Marketing</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <div class="footer-links" style="color: #8892b0; font-size: 0.95rem;">
+            <p>📍 123 Tech Avenue, Silicon Valley</p>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>✉️ hello@swtech.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SW Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

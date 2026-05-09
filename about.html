@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | SW Technologies</title>
+  <meta name="description" content="Learn more about SW Technologies, our mission, vision, and the team behind our modern web solutions.">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page Banner */
+    .page-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+      color: var(--white);
+      padding: 150px 0 80px; /* Account for navbar */
+      text-align: center;
+      position: relative;
+    }
+    
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle fill="rgba(100,255,218,0.1)" cx="2" cy="2" r="2"></circle></pattern></defs><rect x="0" y="0" width="100%" height="100%" fill="url(%23dots)"></rect></svg>');
+      opacity: 0.5;
+    }
+
+    .banner-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .banner-subtitle {
+      color: #ccd6f6;
+      font-size: 1.1rem;
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* About Story */
+    .story-section {
+      background-color: var(--white);
+    }
+    
+    .story-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+
+    .story-text p:first-child {
+      font-size: 1.25rem;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    /* Mission & Vision */
+    .mission-vision {
+      background-color: var(--bg-color);
+    }
+
+    .mv-card {
+      background: var(--white);
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--accent);
+    }
+
+    .mv-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    /* Team Section */
+    .team-section {
+      background-color: var(--white);
+    }
+
+    .team-card {
+      text-align: center;
+    }
+
+    .team-photo {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 1.5rem;
+      background-color: var(--secondary);
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-size: 3rem;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+    }
+
+    .team-card:hover .team-photo {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .team-name {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+      color: var(--heading-main);
+    }
+
+    .team-role {
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    /* Stats Section */
+    .stats-section {
+      background-color: var(--primary);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--accent);
+      font-family: var(--font-heading);
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 1.1rem;
+      color: #ccd6f6;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .banner-title { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">SW <span>Tech</span></a>
+      <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Get a Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Banner -->
+  <header class="page-banner">
+    <div class="container">
+      <h1 class="banner-title">Our Story</h1>
+      <p class="banner-subtitle">Discover the passion, people, and purpose driving SW Technologies.</p>
+    </div>
+  </header>
+
+  <!-- Company Story -->
+  <section class="story-section section-padding">
+    <div class="container grid-2" style="align-items: center;">
+      <div class="story-text">
+        <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Who We Are</h2>
+        <p>SW Technologies was founded with a single mission: to empower businesses by crafting digital experiences that are not only visually stunning but fundamentally effective.</p>
+        <p>We are a team of passionate developers, designers, and strategists who believe that a website is the heart of your digital identity. In a world where first impressions are made in milliseconds, we ensure yours counts. Over the years, we've helped startups find their footing and established enterprises scale their operations through cutting-edge web solutions.</p>
+        <p>From custom web applications to high-converting e-commerce platforms, we blend technical excellence with creative innovation to deliver results that exceed expectations.</p>
+      </div>
+      <div>
+        <div style="background: linear-gradient(135deg, var(--bg-color), #e2e8f0); border-radius: 12px; height: 400px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+          <span style="font-size: 4rem;">🏢</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="mission-vision section-padding">
+    <div class="container grid-2">
+      <div class="mv-card">
+        <h3>Our Mission</h3>
+        <p>To deliver high-quality, scalable, and tailored digital solutions that solve real-world problems and drive measurable growth for our clients. We strive to demystify technology and make the digital landscape accessible and profitable for businesses of all sizes.</p>
+      </div>
+      <div class="mv-card">
+        <h3>Our Vision</h3>
+        <p>To be the leading partner in digital transformation, recognized for our commitment to innovation, excellence, and the success of our clients. We envision a future where every business, regardless of size, can leverage world-class web technology to thrive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section section-padding">
+    <div class="container">
+      <h2 class="section-title">Meet the Team</h2>
+      <p class="section-subtitle">The innovative minds behind our successful projects.</p>
+      
+      <div class="grid-3" style="margin-top: 4rem;">
+        <div class="team-card">
+          <div class="team-photo">👨‍💻</div>
+          <h3 class="team-name">Alex Carter</h3>
+          <p class="team-role">Lead Developer</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Architecting scalable solutions and ensuring code quality.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">👩‍🎨</div>
+          <h3 class="team-name">Sarah Jenkins</h3>
+          <p class="team-role">UI/UX Designer</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Crafting intuitive and engaging user experiences.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-photo">📈</div>
+          <h3 class="team-name">Marcus Reed</h3>
+          <p class="team-role">Digital Strategist</p>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Driving traffic, conversions, and business growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section section-padding">
+    <div class="container grid-3">
+      <div>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div>
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div>
+        <div class="stat-number">3+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <a href="index.html" class="nav-logo" style="display: block; margin-bottom: 1rem;">SW <span>Tech</span></a>
+          <p style="color: #8892b0; font-size: 0.95rem; margin-bottom: 1.5rem;">Empowering businesses with modern, fast, and scalable digital solutions.</p>
+          <div style="display: flex; gap: 1rem; color: var(--accent);">
+            <a href="#">TW</a>
+            <a href="#">LN</a>
+            <a href="#">IG</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <div class="footer-links">
+            <a href="services.html">Website Design</a>
+            <a href="services.html">Website Development</a>
+            <a href="services.html">E-Commerce</a>
+            <a href="services.html">SEO & Marketing</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <div class="footer-links" style="color: #8892b0; font-size: 0.95rem;">
+            <p>📍 123 Tech Avenue, Silicon Valley</p>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>✉️ hello@swtech.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SW Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
