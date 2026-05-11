@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | SW Technologies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">SW <span>Tech</span></a>
+      <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-padding" id="adminPanel" style="padding-top:140px;">
+    <div class="container">
+      <h2 class="section-title">Admin Dashboard</h2>
+      <div class="card" style="overflow:auto;margin-bottom:2rem;">
+        <h3 style="margin-bottom:1rem;">Contact Submissions</h3>
+        <table style="width:100%;border-collapse:collapse;">
+          <thead><tr><th>Name</th><th>Email</th><th>Subject</th><th>Date</th><th>Action</th></tr></thead>
+          <tbody id="contactsTableBody"></tbody>
+        </table>
+      </div>
+      <div class="card" style="overflow:auto;margin-bottom:2rem;">
+        <h3 style="margin-bottom:1rem;">Registered Users</h3>
+        <table style="width:100%;border-collapse:collapse;">
+          <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr></thead>
+          <tbody id="usersTableBody"></tbody>
+        </table>
+      </div>
+      <div class="card" style="overflow:auto;">
+        <h3 style="margin-bottom:1rem;">Quote Requests</h3>
+        <table style="width:100%;border-collapse:collapse;">
+          <thead><tr><th>Name</th><th>Email</th><th>Service</th><th>Budget</th><th>Phone</th></tr></thead>
+          <tbody id="quotesTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-content"></div><div class="footer-bottom"><p>&copy; 2026 SW Technologies. All rights reserved.</p></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

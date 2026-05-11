@@ -204,7 +204,7 @@
         <h1 class="hero-headline">Building Digital Experiences That <span>Win Trust</span></h1>
         <p class="hero-subheadline">We help businesses, startups, and entrepreneurs establish a strong online presence with fast, modern, and responsive websites.</p>
         <div class="hero-ctas">
-          <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="#" class="btn btn-primary" data-open-quote>Get a Free Quote</a>
           <a href="services.html" class="btn btn-secondary">View Our Services</a>
         </div>
       </div>
@@ -310,6 +310,37 @@
       </div>
     </div>
   </section>
+
+  <div id="quoteModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:2000;align-items:center;justify-content:center;padding:1rem;">
+    <div style="background:#fff;max-width:640px;width:100%;border-radius:12px;padding:1.5rem;position:relative;">
+      <button id="closeQuoteModal" style="position:absolute;top:0.75rem;right:0.75rem;border:none;background:none;font-size:1.4rem;cursor:pointer;">&times;</button>
+      <h3 style="margin-bottom:1rem;">Get a Free Quote</h3>
+      <form id="quoteForm">
+        <div class="grid-2">
+          <input name="name" placeholder="Name" required style="padding:0.75rem;border:1px solid #dbe2ea;border-radius:8px;">
+          <input name="email" type="email" placeholder="Email" required style="padding:0.75rem;border:1px solid #dbe2ea;border-radius:8px;">
+          <input name="phone" placeholder="Phone" required style="padding:0.75rem;border:1px solid #dbe2ea;border-radius:8px;">
+          <select name="serviceRequired" required style="padding:0.75rem;border:1px solid #dbe2ea;border-radius:8px;">
+            <option value="">Service Required</option>
+            <option>Website Design</option>
+            <option>Website Development</option>
+            <option>E-Commerce</option>
+            <option>SEO & Marketing</option>
+          </select>
+          <select name="budget" required style="padding:0.75rem;border:1px solid #dbe2ea;border-radius:8px;">
+            <option value="">Budget</option>
+            <option>Below $500</option>
+            <option>$500 - $1500</option>
+            <option>$1500 - $5000</option>
+            <option>$5000+</option>
+          </select>
+        </div>
+        <textarea name="message" rows="4" required placeholder="Project details..." style="margin-top:1rem;width:100%;padding:0.75rem;border:1px solid #dbe2ea;border-radius:8px;"></textarea>
+        <button class="btn btn-primary" style="margin-top:1rem;width:100%;">Submit Quote</button>
+        <small id="quoteStatus" style="display:none;margin-top:0.6rem;"></small>
+      </form>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">

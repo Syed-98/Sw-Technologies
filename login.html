@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | SW Technologies</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">SW <span>Tech</span></a>
+      <button class="hamburger" aria-label="Toggle Navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-padding" style="min-height:80vh;padding-top:140px;">
+    <div class="container">
+      <div class="card" style="max-width:520px;margin:0 auto;">
+        <h2 style="margin-bottom:1rem;">Login</h2>
+        <form id="loginForm">
+          <div class="form-group"><label>Email</label><input name="email" type="email" required style="width:100%;padding:0.8rem;border:1px solid #e2e8f0;border-radius:8px;"></div>
+          <div class="form-group"><label>Password</label><input name="password" type="password" required style="width:100%;padding:0.8rem;border:1px solid #e2e8f0;border-radius:8px;"></div>
+          <button class="btn btn-primary" style="width:100%;">Login</button>
+          <small id="loginStatus" style="display:none;margin-top:0.8rem;"></small>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-content"></div><div class="footer-bottom"><p>&copy; 2026 SW Technologies. All rights reserved.</p></div></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
