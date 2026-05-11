@@ -1,6 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const API_BASE_URL =
-    window.SW_API_BASE_URL || localStorage.getItem("SW_API_BASE_URL") || "http://localhost:5000";
+  function resolveApiBaseUrl() {
+    if (window.SW_API_BASE_URL) return String(window.SW_API_BASE_URL).replace(/\/$/, "");
+    const fromLs = localStorage.getItem("SW_API_BASE_URL");
+    if (fromLs) return fromLs.replace(/\/$/, "");
+    const host = window.location.hostname || "";
+    // Same Render/Railway service serves API + static files → call same origin.
+    if (host.includes("onrender.com") || host.includes("railway.app")) {
+      return window.location.origin;
+    }
+    return "http://localhost:5000";
+  }
+  const API_BASE_URL = resolveApiBaseUrl();
   const token = localStorage.getItem("token");
   const savedUser = localStorage.getItem("user");
   const currentUser = savedUser ? JSON.parse(savedUser) : null;
